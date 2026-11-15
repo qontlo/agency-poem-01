@@ -1,6 +1,7 @@
 // agency-poem-01 — a program that writes one short poem about agency.
 // Node 22, standard library only. It writes the same bytes on every run:
 // a fixed poem, no input, no clock, no randomness, no network.
+// It writes exactly one file: entry.txt in the output directory.
 //
 // Run it outside the grader with:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
@@ -33,4 +34,3 @@ const POEM = [TITLE, ...LINES].join('\n');
 
 mkdirSync(OUT, { recursive: true });
 writeFileSync(join(OUT, 'entry.txt'), POEM);
-writeFileSync(join(OUT, 'poem.md'), POEM);
